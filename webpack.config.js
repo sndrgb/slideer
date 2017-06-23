@@ -45,10 +45,11 @@ module.exports = {
     }),
 
     new BrowserSyncPlugin({
-      // browse to http://localhost:3000/ during development
+      // browse to http://localhost:3100/ during development
       host: 'localhost',
       port: 3100,
-      proxy: 'http://localhost:3000/'
+      files: ['./example/*.html'],
+      server: { baseDir: ['example'] },
     }),
 
   ]
